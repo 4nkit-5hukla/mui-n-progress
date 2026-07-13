@@ -4,7 +4,7 @@
   "description": "MUI-powered progress bar with the nprogress API — start, set, inc, done from anywhere",
   "author": "ankit5hukla",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/4nkit-5hukla/mui-n-progress.git"
