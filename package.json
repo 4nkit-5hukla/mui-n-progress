@@ -1,0 +1,76 @@
+{
+  "type": "module",
+  "name": "mui-n-progress",
+  "description": "MUI-powered progress bar with the nprogress API — start, set, inc, done from anywhere",
+  "author": "ankit5hukla",
+  "license": "MIT",
+  "version": "1.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/mui-n-progress.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/mui-n-progress.es.js",
+      "default": "./dist/mui-n-progress.es.js"
+    }
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "mui",
+    "material",
+    "progress",
+    "nprogress",
+    "loading",
+    "bar"
+  ],
+  "scripts": {
+    "build": "npm run lint && npm run test -- run && vite build",
+    "prepublishOnly": "npm run build",
+    "lint": "npx tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.0.0 || ^7.0.0 || ^9.0.0",
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^9.2.0",
+    "@storybook/addon-docs": "^10.5.0",
+    "@storybook/addon-links": "^10.5.0",
+    "@storybook/react": "^10.5.0",
+    "@storybook/react-vite": "^10.5.0",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "@vitest/coverage-v8": "^4.1.2",
+    "jsdom": "^29.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.4",
+    "vite-plugin-dts": "^5.0.3",
+    "vitest": "^4.1.2"
+  }
+}
