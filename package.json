@@ -5,6 +5,14 @@
   "author": "ankit5hukla",
   "license": "MIT",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4nkit-5hukla/mui-n-progress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/4nkit-5hukla/mui-n-progress/issues"
+  },
+  "homepage": "https://github.com/4nkit-5hukla/mui-n-progress#readme",
   "files": [
     "dist"
   ],
