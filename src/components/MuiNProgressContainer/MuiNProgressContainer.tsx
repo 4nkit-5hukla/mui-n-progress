@@ -1,6 +1,5 @@
 import React from 'react'
 import CircularProgress from '@mui/material/CircularProgress'
-import LinearProgress from '@mui/material/LinearProgress'
 import Portal from '@mui/material/Portal'
 import type { MuiNProgressProps, MuiNProgressStoreState } from '../../index.types'
 import Styled from './MuiNProgressContainer.styled'
@@ -90,12 +89,12 @@ const MuiNProgressContainer = ({
 
   const bar = (
     <Styled.Container className={className} isCustomParent={isCustomParent}>
-      <LinearProgress
+      <Styled.LinearProgressStyled
+        barHeight={height}
         color={color}
         variant="determinate"
         value={status === null ? 0 : status * 100}
         sx={{
-          height,
           opacity: phase === 'fading' ? 0 : 1,
           transition:
             phase === 'fading'

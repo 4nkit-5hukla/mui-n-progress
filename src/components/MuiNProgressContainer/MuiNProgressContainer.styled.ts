@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box'
+import LinearProgress from '@mui/material/LinearProgress'
 import { styled } from '@mui/material/styles'
 
 const Container = styled(Box, {
@@ -16,6 +17,16 @@ const Container = styled(Box, {
   }
 })
 
+const LinearProgressStyled = styled(LinearProgress, {
+  shouldForwardProp: (prop) => {
+    return prop !== 'barHeight'
+  }
+})<{ barHeight: number | string }>(({ barHeight }) => {
+  return {
+    height: barHeight
+  }
+})
+
 const SpinnerContainer = styled('div')({
   display: 'block',
   position: 'fixed',
@@ -24,13 +35,8 @@ const SpinnerContainer = styled('div')({
   right: 15
 })
 
-const CustomParent = styled('div')({
-  overflow: 'hidden',
-  position: 'relative'
-})
-
 export default {
   Container,
-  CustomParent,
+  LinearProgressStyled,
   SpinnerContainer
 }

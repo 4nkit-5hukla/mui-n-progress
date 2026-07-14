@@ -219,6 +219,8 @@ function configure(options: MuiNProgressConfigureOptions): MuiNProgressAPI {
     }
   }
 
+  emit()
+
   return api
 }
 
