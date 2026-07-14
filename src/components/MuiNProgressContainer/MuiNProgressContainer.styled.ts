@@ -23,7 +23,9 @@ const LinearProgressStyled = styled(LinearProgress, {
   }
 })<{ barHeight: number | string }>(({ barHeight }) => {
   return {
-    height: barHeight
+    '&&': {
+      height: barHeight
+    }
   }
 })
 
