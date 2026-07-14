@@ -2,6 +2,8 @@
 
 MUI-powered progress bar with the [nprogress](https://github.com/rstacruz/nprogress) API. Drop-in procedural calls — `start()`, `set()`, `inc()`, `done()` — backed by MUI's `LinearProgress` and `CircularProgress` components, fully theme-aware.
 
+📖 **[Storybook →](https://4nkit-5hukla.github.io/mui-n-progress/)**
+
 ## Installation
 
 ```bash
@@ -91,7 +93,10 @@ Update settings at runtime. Returns `muiNProgress` for chaining.
 | `trickleSpeed` | `number` | `200` | Trickle interval in ms |
 | `showSpinner` | `boolean` | `true` | Show circular spinner |
 | `parent` | `string \| HTMLElement` | `'body'` | Portal container |
-| `color` | `'primary' \| 'secondary' \| 'inherit'` | `'primary'` | MUI color for bar and spinner |
+| `color` | `'primary' \| 'secondary' \| 'error' \| 'info' \| 'success' \| 'warning' \| 'inherit'` | `'primary'` | MUI color for bar and spinner |
+| `height` | `number \| string` | `2` | Height of the `LinearProgress` bar |
+| `size` | `number` | `18` | Diameter of the `CircularProgress` spinner (px) |
+| `thickness` | `number` | `4` | Stroke width of the `CircularProgress` spinner |
 
 ```tsx
 muiNProgress.configure({
@@ -105,12 +110,15 @@ muiNProgress.configure({
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `color` | `'primary' \| 'secondary' \| 'inherit'` | settings | Override the bar color |
+| `color` | MUI color literal | settings | Override the bar and spinner color |
+| `height` | `number \| string` | settings | Override bar height |
 | `showSpinner` | `boolean` | settings | Override spinner visibility |
+| `size` | `number` | settings | Override spinner diameter (px) |
+| `thickness` | `number` | settings | Override spinner stroke width |
 | `className` | `string` | — | CSS class on the container |
 
 ```tsx
-<MuiNProgress color="secondary" showSpinner={false} />
+<MuiNProgress color="secondary" height={4} size={24} thickness={5} showSpinner />
 ```
 
 ## How it works

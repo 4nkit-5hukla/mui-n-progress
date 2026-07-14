@@ -28,18 +28,24 @@ const useStore = (
 const MuiNProgressContainer = ({
   getSnapshot,
   subscribe,
+  className,
   color: colorProp,
+  height: heightProp,
   showSpinner: showSpinnerProp,
-  className
+  size: sizeProp,
+  thickness: thicknessProp
 }: MuiNProgressContainerProps) => {
   const { status, settings } = useStore(getSnapshot, subscribe)
   const [visible, setVisible] = React.useState(false)
-  const [phase, setPhase] = React.useState<'visible' | 'fading' | 'hidden'>('hidden')
+  const [phase, setPhase] = React.useState<'fading' | 'hidden' | 'visible'>('hidden')
   const speedRef = React.useRef(settings.speed)
   speedRef.current = settings.speed
 
   const color = colorProp ?? settings.color
+  const height = heightProp ?? settings.height
   const showSpinner = showSpinnerProp ?? settings.showSpinner
+  const size = sizeProp ?? settings.size
+  const thickness = thicknessProp ?? settings.thickness
 
   React.useEffect(() => {
     if (status === null) {
@@ -89,7 +95,7 @@ const MuiNProgressContainer = ({
         variant="determinate"
         value={status === null ? 0 : status * 100}
         sx={{
-          height: 2,
+          height,
           opacity: phase === 'fading' ? 0 : 1,
           transition:
             phase === 'fading'
@@ -104,8 +110,8 @@ const MuiNProgressContainer = ({
     <Styled.SpinnerContainer>
       <CircularProgress
         color={color}
-        size={18}
-        thickness={4}
+        size={size}
+        thickness={thickness}
         variant="determinate"
         value={status === null ? 0 : status * 100}
       />

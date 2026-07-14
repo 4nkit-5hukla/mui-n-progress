@@ -1,8 +1,8 @@
-import React from 'react'
 import MuiNProgressContainer from '@components/MuiNProgressContainer/MuiNProgressContainer'
 import { clamp } from '@shared/helpers/clamp'
 import type {
   MuiNProgressAPI,
+  MuiNProgressColor,
   MuiNProgressConfigureOptions,
   MuiNProgressProps,
   MuiNProgressSettings,
@@ -10,6 +10,7 @@ import type {
 } from './index.types'
 
 export type {
+  MuiNProgressColor,
   MuiNProgressConfigureOptions,
   MuiNProgressProps,
   MuiNProgressSettings
@@ -19,10 +20,13 @@ type Listener = () => void
 
 const defaultSettings: MuiNProgressSettings = {
   color: 'primary',
+  height: 2,
   minimum: 0.08,
   parent: 'body',
   showSpinner: true,
+  size: 18,
   speed: 200,
+  thickness: 4,
   trickle: true,
   trickleSpeed: 200
 }
