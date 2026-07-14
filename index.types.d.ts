@@ -1,3 +1,4 @@
+export type MuiNProgressColor = 'error' | 'info' | 'inherit' | 'primary' | 'secondary' | 'success' | 'warning';
 export interface MuiNProgressSettings {
     minimum: number;
     speed: number;
@@ -5,7 +6,10 @@ export interface MuiNProgressSettings {
     trickleSpeed: number;
     showSpinner: boolean;
     parent: string | HTMLElement;
-    color: 'primary' | 'secondary' | 'inherit';
+    color: MuiNProgressColor;
+    height: number | string;
+    size: number;
+    thickness: number;
 }
 export type MuiNProgressConfigureOptions = Partial<MuiNProgressSettings>;
 export interface MuiNProgressAPI {
@@ -23,7 +27,10 @@ export interface MuiNProgressStoreState {
     settings: MuiNProgressSettings;
 }
 export interface MuiNProgressProps {
-    color?: MuiNProgressSettings['color'];
-    showSpinner?: boolean;
     className?: string;
+    color?: MuiNProgressColor;
+    height?: number | string;
+    showSpinner?: boolean;
+    size?: number;
+    thickness?: number;
 }

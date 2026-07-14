@@ -4,5 +4,5 @@ interface MuiNProgressContainerProps extends MuiNProgressProps {
     getSnapshot: () => MuiNProgressStoreState;
     subscribe: (listener: () => void) => () => void;
 }
-declare const MuiNProgressContainer: ({ getSnapshot, subscribe, color: colorProp, showSpinner: showSpinnerProp, className }: MuiNProgressContainerProps) => React.JSX.Element | null;
+declare const MuiNProgressContainer: ({ getSnapshot, subscribe, className, color: colorProp, height: heightProp, showSpinner: showSpinnerProp, size: sizeProp, thickness: thicknessProp }: MuiNProgressContainerProps) => React.JSX.Element | null;
 export default MuiNProgressContainer;
