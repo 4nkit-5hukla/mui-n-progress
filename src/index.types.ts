@@ -38,11 +38,14 @@ export interface MuiNProgressStoreState {
   settings: MuiNProgressSettings
 }
 
+import type { SxProps, Theme } from '@mui/material/styles'
+
 export interface MuiNProgressProps {
   className?: string
   color?: MuiNProgressColor
   height?: number | string
   showSpinner?: boolean
   size?: number
+  sx?: SxProps<Theme>
   thickness?: number
 }

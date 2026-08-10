@@ -32,6 +32,7 @@ const MuiNProgressContainer = ({
   height: heightProp,
   showSpinner: showSpinnerProp,
   size: sizeProp,
+  sx,
   thickness: thicknessProp
 }: MuiNProgressContainerProps) => {
   const { status, settings } = useStore(getSnapshot, subscribe)
@@ -88,7 +89,7 @@ const MuiNProgressContainer = ({
   const container = (parentNode as HTMLElement) ?? document.body
 
   const bar = (
-    <Styled.Container className={className} isCustomParent={isCustomParent}>
+    <Styled.Container className={className} isCustomParent={isCustomParent} sx={sx}>
       <Styled.LinearProgressStyled
         barHeight={height}
         color={color}

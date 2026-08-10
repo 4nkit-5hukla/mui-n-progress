@@ -4,7 +4,7 @@
   "description": "MUI-powered progress bar with the nprogress API — start, set, inc, done from anywhere",
   "author": "ankit5hukla",
   "license": "MIT",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/4nkit-5hukla/mui-n-progress.git"
@@ -83,5 +83,8 @@
     "vite": "^8.1.4",
     "vite-plugin-dts": "^5.0.3",
     "vitest": "^4.1.2"
+  },
+  "dependencies": {
+    "mui-n-progress": "^1.1.3"
   }
 }
